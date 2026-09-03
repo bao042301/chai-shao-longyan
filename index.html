@@ -12,9 +12,9 @@
 
 .section{padding:58px 22px;border-bottom:1px solid #e2d2bd}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.box,form,.preview{padding:22px;border:1px solid #e2d2bd;border-radius:8px;background:#fffdf8;box-shadow:0 10px 25px #3f231212}.card h3{margin:8px 0}.tag{color:#d98a2b;font-weight:900}.price{display:block;margin-top:18px;color:#7a3f1f;font-size:20px;font-weight:900}.order{display:grid;grid-template-columns:.75fr 1.1fr .9fr;gap:18px;align-items:start}.box p{margin:5px 0;font-weight:800;color:#4f3828}form{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:grid;gap:6px;font-weight:800;color:#4b321f}.full{grid-column:1/-1}input,select,textarea{width:100%;padding:12px;border:1px solid #cdbca6;border-radius:8px;background:white;font:inherit}input[readonly]{background:#f3eadc;font-weight:900}.pickup{padding:14px;border:1px solid #adc69b;border-radius:8px;background:#edf4e8;color:#385420;font-weight:900}.pickup[hidden],[hidden]{display:none!important}button{border:0;border-radius:8px;padding:13px 18px;background:#557a3a;color:white;font:inherit;font-weight:900;cursor:pointer}pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;color:#4d3828}.foot{padding:24px;text-align:center;color:#725f50}
 
-/* 確保故事區與三個卡片裡的所有圖片大小完全一致、整齊劃一 */
 .story-img {width:100%;height:280px;object-fit:cover;border-radius:8px;border:1px solid #e2d2bd;margin-top:20px;}
 .card-img {width:100%;height:220px;object-fit:cover;border-radius:6px;margin-top:14px;border:1px solid #e2d2bd;}
+.line-pay-img {width:120px; border-radius:8px; margin-top:10px; display:block; border:1px solid #e2d2bd;}
 
 @media(max-width:850px){.grid,.order,form{grid-template-columns:1fr}.nav{display:none}.hero{min-height:auto}.hero p{font-size:18px}}
 </style>
@@ -28,7 +28,6 @@
     <p class="eyebrow">Our Story</p>
     <h2>家人用心顧火，留下自然的甜</h2>
     <p>每一批龍眼乾都需要耐心。柴燒的火候不能急，太旺會焦，太弱香氣出不來。慢慢烘到果肉變得琥珀透亮，入口先是淡淡煙燻香，接著是龍眼本身的甜。</p>
-    <!-- 第一張圖：原本第四張（龍眼近照） -->
     <img src="1787219862397.jpg" alt="龍眼近照" class="story-img">
 </section>
 
@@ -38,21 +37,18 @@
             <span class="tag">01</span>
             <h3>柴燒香氣</h3>
             <p>帶一點自然木質香，不是香精味，泡熱水後香氣更明顯。</p>
-            <!-- 第二張圖：原本第三張（剝開果肉特寫） -->
             <img src="1787219862530.jpg" alt="剝開果肉特寫" class="card-img">
         </article>
         <article class="card">
             <span class="tag">02</span>
             <h3>果肉厚實</h3>
             <p>口感 Q 軟有嚼感，直接吃不乾柴，煮甜湯也能釋放甜味。</p>
-            <!-- 第三張圖：原本第二張（有柴火的這張） -->
             <img src="1787219867390.jpg" alt="柴火燃燒中" class="card-img">
         </article>
         <article class="card">
             <span class="tag">03</span>
             <h3>用心烘培</h3>
             <p>家人自己處理與烘焙，數量有限，預購從速。</p>
-            <!-- 第四張圖：原本第一張（土窯上滿滿龍眼） -->
             <img src="1787219867295.jpg" alt="土窯上滿滿的龍眼" class="card-img">
         </article>
     </div>
@@ -60,21 +56,173 @@
 
 <section class="section" id="product"><p class="eyebrow">Product</p><h2>預訂品項</h2><div class="grid"><article class="card"><p class="tag">家庭嚐鮮</p><h3>柴燒龍眼乾一斤裝</h3><p>適合第一次購買、泡茶與日常零嘴。</p><strong class="price">每包 $350</strong></article><article class="card" style="background:#934219;color:white"><p class="tag" style="color:#ffe4bd">推薦</p><h3>三包一斤裝優惠組</h3><p>適合家裡常備、送親友、煮甜湯。</p><strong class="price" style="color:white">每組 $1000</strong></article><article class="card"><p class="tag">團購</p><h3>10包以上一斤裝團購</h3><p>公司、親友團、節慶禮盒可另外詢問。</p><strong class="price">每包 $300</strong></article></div></section>
 
-<section class="section order" id="order"><div><p class="eyebrow">Order By LINE</p><h2>心動就趕快預訂吧</h2><p>填完後會整理訂購訊息。完成匯款並留下後五碼，再傳到 LINE@ 官方帳號即可核對訂單。</p><div class="box"><h3>付款與取貨資訊</h3><p>匯款：中國信託（822）</p><p>帳號：901560300019</p><p>親自取貨地址：慶和蔘藥行，鶯歌鎮中正三路202-1號。</p></div></div>
-<form id="orderForm"><label>姓名<input name="name" placeholder="王小明" required></label><label>電話<input name="phone" placeholder="0912-345-678" required></label><label class="full">預訂品項<select name="item"><option value="single">柴燒龍眼乾一斤裝，每包 $350</option><option value="trio">柴燒龍眼乾三包一斤裝優惠組，每組 $1000</option><option value="bulk">柴燒龍眼乾10包以上一斤裝團購，每包 $300</option></select></label><label>數量<input name="quantity" inputmode="numeric" placeholder="例如：3包" required></label><label>匯款總金額<input name="total" readonly placeholder="自動計算"></label><label class="full">匯款後五碼<input name="bankCode" inputmode="numeric" maxlength="5" placeholder="例如：12345" required></label><label class="full">取貨 / 寄送方式<select name="delivery"><option>郵局寄送</option><option>親自取貨</option></select></label><label class="full" id="addressField">寄送地址<input name="address" placeholder="請填寫郵遞區號 + 完整地址，例如：239 新北市鶯歌區..." required></label><div class="pickup full" id="pickupNotice" hidden>親自取貨地址：慶和蔘藥行，鶯歌鎮中正三路202-1號。</div><label class="full">特殊需求<textarea name="note" rows="4" placeholder="其他需要協助的事項。"></textarea></label><button class="full" type="submit">開啟 LINE@官方帳號並複製訊息</button></form>
+<section class="section order" id="order"><div><p class="eyebrow">Order By LINE</p><h2>心動就趕快預訂吧</h2><p>填寫完表單後，系統會幫您整理好訂單格式。送出後請於 LINE@ 官方帳號等待我們核對與後續安排。</p>
+<div class="box">
+    <h3>付款與取貨資訊</h3>
+    <p style="color:#b5521d">【銀行匯款】</p>
+    <p>中國信託（822）／ 帳號：901560300019</p>
+    <br>
+    <p style="color:#b5521d">【LINE Pay 快速結帳】</p>
+    <p>可直接在表單內點擊連結付款，安全又快速。</p>
+    <img src="39528.jpg" alt="本店接受 LINE Pay" class="line-pay-img">
+    <br>
+    <p style="color:#b5521d">【親自取貨地址】</p>
+    <p>慶和蔘藥行，鶯歌鎮中正三路202-1號。</p>
+</div>
+</div>
+
+<form id="orderForm">
+    <label>姓名<input name="name" placeholder="王小明" required></label>
+    <label>電話<input name="phone" placeholder="0912-345-678" required></label>
+    <label class="full">預訂品項
+        <select name="item">
+            <option value="single">柴燒龍眼乾一斤裝，每包 $350</option>
+            <option value="trio">柴燒龍眼乾三包一斤裝優惠組，每組 $1000</option>
+            <option value="bulk">柴燒龍眼乾10包以上一斤裝團購，每包 $300</option>
+        </select>
+    </label>
+    <label>數量<input name="quantity" inputmode="numeric" placeholder="例如：3包" required></label>
+    <label>總金額<input name="total" readonly placeholder="自動計算"></label>
+    
+    <label class="full">付款方式
+        <select name="payment">
+            <option value="transfer">銀行匯款</option>
+            <option value="linepay">LINE Pay</option>
+        </select>
+    </label>
+
+    <label class="full" id="bankCodeField">匯款後五碼
+        <input name="bankCode" inputmode="numeric" maxlength="5" placeholder="例如：12345" required>
+    </label>
+
+    <div id="linePayAction" class="full" hidden style="background:#e6f3e6; padding:16px; border-radius:8px; border:1px solid #06c755;">
+        <p style="color:#06c755; font-weight:900; margin:0 0 10px 0;">✅ LINE Pay 付款步驟：</p>
+        <ol style="margin:0 0 15px 0; padding-left:22px; font-weight:800; color:#333;">
+            <li>請確認您的總金額為：<strong id="lpAmount" style="color:#b5521d; font-size:18px;">$0</strong></li>
+            <li>點擊下方按鈕，會自動開啟 LINE Pay，請輸入總金額並完成付款。</li>
+            <li><span style="color:red;">付款完成後，請務必回到此網頁，點擊最下方按鈕送出訂單！</span></li>
+        </ol>
+        <a href="https://qrcodepay.line.me/qr/payment/6Aycm0oOkmIVIpmKKU7eR14rBHIhFr4qEGz5HCIhWOaJ6TO273WcWX4eLt4U1kCp" target="_blank" style="display:block; text-align:center; background:#06c755; color:white; padding:14px; border-radius:8px; font-weight:900; font-size:16px; text-decoration:none;">
+            👉 點擊開啟 LINE Pay 付款
+        </a>
+    </div>
+
+    <label class="full">取貨 / 寄送方式
+        <select name="delivery">
+            <option>郵局寄送</option>
+            <option>親自取貨</option>
+        </select>
+    </label>
+    <label class="full" id="addressField">寄送地址
+        <input name="address" placeholder="請填寫郵遞區號 + 完整地址，例如：239 新北市鶯歌區..." required>
+    </label>
+    <div class="pickup full" id="pickupNotice" hidden>親自取貨地址：慶和蔘藥行，鶯歌鎮中正三路202-1號。</div>
+    <label class="full">特殊需求<textarea name="note" rows="4" placeholder="其他需要協助的事項。"></textarea></label>
+    
+    <button class="full" type="submit">開啟 LINE@官方帳號並複製訊息</button>
+</form>
+
 <aside class="preview"><h3>訊息預覽</h3><pre id="messagePreview"></pre></aside></section>
 </main><footer class="foot">柴燒龍眼乾 Demo Page</footer>
 <script>
-const lineUrl="https://line.me/R/ti/p/@716osfvq",form=document.querySelector("#orderForm"),preview=document.querySelector("#messagePreview"),addressField=document.querySelector("#addressField"),pickupNotice=document.querySelector("#pickupNotice"),itemInput=form.querySelector('[name="item"]'),deliveryInput=form.querySelector('[name="delivery"]'),addressInput=form.querySelector('[name="address"]'),bankCodeInput=form.querySelector('[name="bankCode"]'),quantityInput=form.querySelector('[name="quantity"]'),totalInput=form.querySelector('[name="total"]');
+const lineUrl="https://line.me/R/ti/p/@716osfvq",
+form=document.querySelector("#orderForm"),
+preview=document.querySelector("#messagePreview"),
+addressField=document.querySelector("#addressField"),
+pickupNotice=document.querySelector("#pickupNotice"),
+bankCodeField=document.querySelector("#bankCodeField"),
+linePayAction=document.querySelector("#linePayAction"),
+lpAmount=document.querySelector("#lpAmount"),
+itemInput=form.querySelector('[name="item"]'),
+deliveryInput=form.querySelector('[name="delivery"]'),
+paymentInput=form.querySelector('[name="payment"]'),
+addressInput=form.querySelector('[name="address"]'),
+bankCodeInput=form.querySelector('[name="bankCode"]'),
+quantityInput=form.querySelector('[name="quantity"]'),
+totalInput=form.querySelector('[name="total"]');
+
 function parseQuantity(v){const m=String(v).match(/\d+/);return m?Number(m[0]):0}
 function calculateTotal(item,qv){const q=parseQuantity(qv);if(!q)return"未填";if(item==="bulk"&&q<10)return"10包以上團購，數量不能小於10";if(item==="trio")return"$"+q*1000;if(item==="bulk")return"$"+q*300;return"$"+q*350}
 function selectedItemText(){return itemInput.selectedOptions[0].textContent.trim()}
-function updateDelivery(){const pickup=deliveryInput.value==="親自取貨";addressField.hidden=pickup;pickupNotice.hidden=!pickup;addressInput.required=!pickup;if(pickup)addressInput.value=""}
-function validate(){const item=itemInput.value,q=parseQuantity(quantityInput.value);quantityInput.setCustomValidity(item==="bulk"&&q>0&&q<10?"10包以上團購，數量不能小於10。":"");bankCodeInput.setCustomValidity(/^\d{5}$/.test(bankCodeInput.value)?"":"完成匯款後，請填入帳號後五碼。")}
-function message(){const d=new FormData(form),delivery=d.get("delivery"),address=delivery==="親自取貨"?"慶和蔘藥行，鶯歌鎮中正三路202-1號":d.get("address")||"未填",note=d.get("note")||"";let lines=["您好，我想訂購柴燒龍眼乾。","",`姓名：${d.get("name")||""}`,`電話：${d.get("phone")||""}`,`預訂品項：${selectedItemText()}`,`數量：${d.get("quantity")||"未填"}`,`匯款總金額：${calculateTotal(d.get("item"),d.get("quantity"))}`,`匯款後五碼：${d.get("bankCode")||"未填"}`,`方式：${delivery}`,`${delivery==="親自取貨"?"親自取貨地址":"寄送地址"}：${address}`];if(note)lines.push(`特殊需求：${note}`);return lines.join("\n")}
-function update(){totalInput.value=calculateTotal(itemInput.value,quantityInput.value);updateDelivery();validate();preview.textContent=message()}
-async function copyMsg(){update();try{await navigator.clipboard.writeText(preview.textContent);return true}catch{return false}}
-form.addEventListener("input",update);form.addEventListener("submit",async e=>{e.preventDefault();update();if(!form.reportValidity())return;const ok=await copyMsg(),btn=form.querySelector("button");btn.textContent=ok?"已複製，正在開啟 LINE@":"請手動複製訊息";setTimeout(()=>btn.textContent="開啟 LINE@官方帳號並複製訊息",2200);window.open(lineUrl,"_blank","noopener,noreferrer")});update();
+function selectedPaymentText(){return paymentInput.selectedOptions[0].textContent.trim()}
+
+function updateDelivery(){
+    const pickup=deliveryInput.value==="親自取貨";
+    addressField.hidden=pickup;
+    pickupNotice.hidden=!pickup;
+    addressInput.required=!pickup;
+    if(pickup)addressInput.value="";
+}
+
+function updatePayment(){
+    const isTransfer = paymentInput.value === "transfer";
+    
+    // 控制匯款五碼欄位
+    bankCodeField.hidden = !isTransfer; 
+    bankCodeInput.required = isTransfer; 
+    if(!isTransfer) bankCodeInput.value = ""; 
+    
+    // 控制 LINE Pay 引導區塊與金額連動
+    linePayAction.hidden = isTransfer;
+    if(!isTransfer) {
+        lpAmount.textContent = totalInput.value;
+    }
+}
+
+function validate(){
+    const item=itemInput.value,q=parseQuantity(quantityInput.value);
+    quantityInput.setCustomValidity(item==="bulk"&&q>0&&q<10?"10包以上團購，數量不能小於10。":"");
+    
+    if(paymentInput.value === "transfer") {
+        bankCodeInput.setCustomValidity(/^\d{5}$/.test(bankCodeInput.value)?"":"請填入帳號後五碼。");
+    } else {
+        bankCodeInput.setCustomValidity("");
+    }
+}
+
+function message(){
+    const d=new FormData(form),
+    delivery=d.get("delivery"),
+    paymentMethod=selectedPaymentText(),
+    address=delivery==="親自取貨"?"慶和蔘藥行，鶯歌鎮中正三路202-1號":d.get("address")||"未填",
+    note=d.get("note")||"";
+    
+    let lines=["您好，我想訂購柴燒龍眼乾。","",`姓名：${d.get("name")||""}`,`電話：${d.get("phone")||""}`,`預訂品項：${selectedItemText()}`,`數量：${d.get("quantity")||"未填"}`,`總金額：${calculateTotal(d.get("item"),d.get("quantity"))}`,`付款方式：${paymentMethod}`];
+    
+    if(paymentInput.value === "transfer") {
+        lines.push(`匯款後五碼：${d.get("bankCode")||"未填"}`);
+    }
+    
+    lines.push(`取貨方式：${delivery}`,`${delivery==="親自取貨"?"親自取貨地址":"寄送地址"}：${address}`);
+    if(note)lines.push(`特殊需求：${note}`);
+    return lines.join("\n");
+}
+
+function update(){
+    totalInput.value=calculateTotal(itemInput.value,quantityInput.value);
+    updateDelivery();
+    updatePayment();
+    validate();
+    preview.textContent=message();
+}
+
+async function copyMsg(){
+    update();
+    try{await navigator.clipboard.writeText(preview.textContent);return true}
+    catch{return false}
+}
+
+form.addEventListener("input",update);
+form.addEventListener("submit",async e=>{
+    e.preventDefault();
+    update();
+    if(!form.reportValidity())return;
+    const ok=await copyMsg(),btn=form.querySelector("button");
+    btn.textContent=ok?"已複製，正在開啟 LINE@":"請手動複製訊息";
+    setTimeout(()=>btn.textContent="開啟 LINE@官方帳號並複製訊息",2200);
+    window.open(lineUrl,"_blank","noopener,noreferrer");
+});
+update();
 </script>
 </body>
 </html>
