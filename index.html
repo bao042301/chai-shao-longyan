@@ -7,17 +7,18 @@
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,"Microsoft JhengHei",sans-serif;color:#241911;background:#fff9ef;line-height:1.65}a{text-decoration:none;color:inherit}.top{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:#fff9efdd;border-bottom:1px solid #e2d2bd;backdrop-filter:blur(10px)}.brand{display:flex;gap:10px;align-items:center;font-weight:900}.seal{display:grid;place-items:center;width:38px;height:38px;border-radius:8px;background:#7a3f1f;color:#fff9ef}.nav{display:flex;gap:22px;font-size:14px;color:#725f50}
 
-/* 第一大區塊：帶有半透明淺色背景圖的完美設計 */
 .hero{position:relative;min-height:560px;padding:72px 22px;display:grid;align-items:center;background:linear-gradient(rgba(255,249,239,0.92),rgba(255,249,239,0.85)),url('1787219867390.jpg') center/cover no-repeat;}
 .hero-inner,.section{width:min(1080px,100%);margin:auto;position:relative;z-index:1}.eyebrow{margin:0 0 10px;color:#b5521d;font-size:13px;font-weight:900;text-transform:uppercase}.hero h1{max-width:620px;margin:0;font-size:clamp(42px,8vw,78px);line-height:1}.hero p{max-width:560px;font-size:20px;color:#4f3a2b}.btn-group{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.btn{display:inline-block;padding:13px 20px;border-radius:8px;background:#557a3a;color:white;font-weight:900}.btn-outline{display:inline-block;padding:13px 20px;border-radius:8px;background:white;color:#557a3a;border:2px solid #557a3a;font-weight:900}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.chips span{padding:8px 12px;border:1px solid #d9c6ac;border-radius:8px;background:#ffffffaa;font-weight:800}
 
 .section{padding:58px 22px;border-bottom:1px solid #e2d2bd}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.box,form,.preview{padding:22px;border:1px solid #e2d2bd;border-radius:8px;background:#fffdf8;box-shadow:0 10px 25px #3f231212}.card h3{margin:8px 0}.tag{color:#d98a2b;font-weight:900}.price{display:block;margin-top:18px;color:#7a3f1f;font-size:20px;font-weight:900}.order{display:grid;grid-template-columns:.75fr 1.1fr .9fr;gap:18px;align-items:start}.box p{margin:5px 0;font-weight:800;color:#4f3828}form{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:grid;gap:6px;font-weight:800;color:#4b321f}.full{grid-column:1/-1}input,select,textarea{width:100%;padding:12px;border:1px solid #cdbca6;border-radius:8px;background:white;font:inherit}input[readonly]{background:#f3eadc;font-weight:900}.pickup{padding:14px;border:1px solid #adc69b;border-radius:8px;background:#edf4e8;color:#385420;font-weight:900}.pickup[hidden],[hidden]{display:none!important}button{border:0;border-radius:8px;padding:13px 18px;background:#557a3a;color:white;font:inherit;font-weight:900;cursor:pointer}pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;color:#4d3828}.foot{padding:24px;text-align:center;color:#725f50}
 
-.story-img {width:100%;max-height:420px;object-fit:cover;border-radius:8px;border:1px solid #e2d2bd;margin-top:20px;}
+/* 故事區雙圖並排樣式 */
+.story-images {display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px;}
+.story-images img {width:100%;height:260px;object-fit:cover;border-radius:8px;border:1px solid #e2d2bd;}
 .card-img-stack {display:flex;flex-direction:column;gap:12px;margin-top:16px;}
 .card-img-stack img {width:100%;height:220px;object-fit:cover;border-radius:6px;border:1px solid #e2d2bd;}
 
-@media(max-width:850px){.grid,.order,form{grid-template-columns:1fr}.nav{display:none}.hero{min-height:auto}.hero p{font-size:18px}}
+@media(max-width:850px){.grid,.order,form,.story-images{grid-template-columns:1fr}.nav{display:none}.hero{min-height:auto}.hero p{font-size:18px}}
 </style>
 </head>
 <body>
@@ -25,11 +26,20 @@
 <main>
 <section class="hero"><div class="hero-inner"><p class="eyebrow">家人自己柴燒慢焙</p><h1>一口吃得到柴火香的龍眼乾</h1><p>不是大量工廠烘乾，是家裡用柴火慢慢烘出的古早味。香氣厚、甜味溫潤，適合當零嘴、泡茶，也能煮桂圓紅棗茶。</p><div class="btn-group"><a class="btn" href="#order">我要預訂</a><a class="btn-outline" href="https://line.me/R/ti/p/@716osfvq" target="_blank">加 LINE 詢問</a></div><div class="chips"><span>柴火慢焙</span><span>小量製作</span><span>甜而不膩</span></div></div></section>
 
-<section class="section" id="story"><p class="eyebrow">Our Story</p><h2>家人用時間顧火，留下自然的甜</h2><p>每一批龍眼乾都需要耐心。柴燒的火候不能急，太旺會焦，太弱香氣出不來。慢慢烘到果肉變得琥珀透亮，入口先是淡淡煙燻香，接著是龍眼本身的甜。</p><img src="1787219867390.jpg" alt="柴燒土窯" class="story-img"></section>
+<section class="section" id="story">
+    <p class="eyebrow">Our Story</p>
+    <h2>家人用時間顧火，留下自然的甜</h2>
+    <p>每一批龍眼乾都需要耐心。柴燒的火候不能急，太旺會焦，太弱香氣出不來。慢慢烘到果肉變得琥珀透亮，入口先是淡淡煙燻香，接著是龍眼本身的甜。</p>
+    <!-- 故事區雙圖並排展示 -->
+    <div class="story-images">
+        <img src="1787219867390.jpg" alt="柴燒土窯遠景">
+        <img src="1787219867295.jpg" alt="土窯上滿滿的龍眼">
+    </div>
+</section>
 
 <section class="section"><div class="grid">
 <article class="card"><span class="tag">01</span><h3>柴燒香氣</h3><p>帶一點自然木質香，不是香精味，泡熱水後香氣更明顯。</p></article>
-<article class="card"><span class="tag">02</span><h3>果肉厚實</h3><p>口感 Q 軟有嚼感，直接吃不乾柴，煮甜湯也能釋放甜味。</p><div class="card-img-stack"><img src="1787219867295.jpg" alt="帶殼龍眼乾"><img src="1787219862530.jpg" alt="剝開果肉特寫"></div></article>
+<article class="card"><span class="tag">02</span><h3>果肉厚實</h3><p>口感 Q 軟有嚼感，直接吃不乾柴，煮甜湯也能釋放甜味。</p><div class="card-img-stack"><img src="1787219862530.jpg" alt="剝開果肉特寫"><img src="1787219862397.jpg" alt="帶殼裝袋"></div></article>
 <article class="card"><span class="tag">03</span><h3>小量手作</h3><p>家人自己處理與烘焙，數量有限，適合先預訂保留。</p></article>
 </div></section>
 
