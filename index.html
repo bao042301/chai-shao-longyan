@@ -12,8 +12,9 @@
 
 .section{padding:58px 22px;border-bottom:1px solid #e2d2bd}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.box,form,.preview{padding:22px;border:1px solid #e2d2bd;border-radius:8px;background:#fffdf8;box-shadow:0 10px 25px #3f231212}.card h3{margin:8px 0}.tag{color:#d98a2b;font-weight:900}.price{display:block;margin-top:18px;color:#7a3f1f;font-size:20px;font-weight:900}.order{display:grid;grid-template-columns:.75fr 1.1fr .9fr;gap:18px;align-items:start}.box p{margin:5px 0;font-weight:800;color:#4f3828}form{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:grid;gap:6px;font-weight:800;color:#4b321f}.full{grid-column:1/-1}input,select,textarea{width:100%;padding:12px;border:1px solid #cdbca6;border-radius:8px;background:white;font:inherit}input[readonly]{background:#f3eadc;font-weight:900}.pickup{padding:14px;border:1px solid #adc69b;border-radius:8px;background:#edf4e8;color:#385420;font-weight:900}.pickup[hidden],[hidden]{display:none!important}button{border:0;border-radius:8px;padding:13px 18px;background:#557a3a;color:white;font:inherit;font-weight:900;cursor:pointer}pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;color:#4d3828}.foot{padding:24px;text-align:center;color:#725f50}
 
-.story-img {width:100%;max-height:420px;object-fit:cover;border-radius:8px;border:1px solid #e2d2bd;margin-top:20px;}
-.card-img {width:100%;height:180px;object-fit:cover;border-radius:6px;margin-top:14px;border:1px solid #e2d2bd;}
+/* 確保故事區與三個卡片裡的所有圖片大小完全一致、整齊劃一 */
+.story-img {width:100%;height:280px;object-fit:cover;border-radius:8px;border:1px solid #e2d2bd;margin-top:20px;}
+.card-img {width:100%;height:220px;object-fit:cover;border-radius:6px;margin-top:14px;border:1px solid #e2d2bd;}
 
 @media(max-width:850px){.grid,.order,form{grid-template-columns:1fr}.nav{display:none}.hero{min-height:auto}.hero p{font-size:18px}}
 </style>
@@ -27,8 +28,8 @@
     <p class="eyebrow">Our Story</p>
     <h2>家人用時間顧火，留下自然的甜</h2>
     <p>每一批龍眼乾都需要耐心。柴燒的火候不能急，太旺會焦，太弱香氣出不來。慢慢烘到果肉變得琥珀透亮，入口先是淡淡煙燻香，接著是龍眼本身的甜。</p>
-    <!-- 1. 家人用時間顧火：放土窯上滿滿龍遠的照片 -->
-    <img src="1787219867295.jpg" alt="土窯上滿滿的龍眼" class="story-img">
+    <!-- 第一張圖：原本第四張（龍眼近照） -->
+    <img src="1787219862397.jpg" alt="龍眼近照" class="story-img">
 </section>
 
 <section class="section">
@@ -37,22 +38,22 @@
             <span class="tag">01</span>
             <h3>柴燒香氣</h3>
             <p>帶一點自然木質香，不是香精味，泡熱水後香氣更明顯。</p>
-            <!-- 2. 柴燒香氣：放有柴火的這張 -->
-            <img src="1787219867390.jpg" alt="柴火燃燒中" class="card-img">
+            <!-- 第二張圖：原本第三張（剝開果肉特寫） -->
+            <img src="1787219862530.jpg" alt="剝開果肉特寫" class="card-img">
         </article>
         <article class="card">
             <span class="tag">02</span>
             <h3>果肉厚實</h3>
             <p>口感 Q 軟有嚼感，直接吃不乾柴，煮甜湯也能釋放甜味。</p>
-            <!-- 3. 果肉厚實：放剝開果肉特寫 -->
-            <img src="1787219862530.jpg" alt="剝開果肉特寫" class="card-img">
+            <!-- 第三張圖：原本第二張（有柴火的這張） -->
+            <img src="1787219867390.jpg" alt="柴火燃燒中" class="card-img">
         </article>
         <article class="card">
             <span class="tag">03</span>
             <h3>用心烘培</h3>
             <p>家人自己處理與烘焙，數量有限，適合先預訂保留。</p>
-            <!-- 4. 用心烘培：放都是龍眼的近照 -->
-            <img src="1787219862397.jpg" alt="龍眼近照" class="card-img">
+            <!-- 第四張圖：原本第一張（土窯上滿滿龍眼） -->
+            <img src="1787219867295.jpg" alt="土窯上滿滿的龍眼" class="card-img">
         </article>
     </div>
 </section>
