@@ -7,9 +7,11 @@
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:Arial,"Microsoft JhengHei",sans-serif;color:#241911;background:#fff9ef;line-height:1.65}a{text-decoration:none;color:inherit}.top{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:#fff9efdd;border-bottom:1px solid #e2d2bd;backdrop-filter:blur(10px)}.brand{display:flex;gap:10px;align-items:center;font-weight:900}.seal{display:grid;place-items:center;width:38px;height:38px;border-radius:8px;background:#7a3f1f;color:#fff9ef}.nav{display:flex;gap:22px;font-size:14px;color:#725f50}.hero{min-height:560px;padding:72px 22px;display:grid;align-items:center;background:linear-gradient(115deg,#fff9ef 0%,#fff1d8 48%,#6d3517 49%,#a84e18 100%)}.hero-inner,.section{width:min(1080px,100%);margin:auto}.eyebrow{margin:0 0 10px;color:#b5521d;font-size:13px;font-weight:900;text-transform:uppercase}.hero h1{max-width:620px;margin:0;font-size:clamp(42px,8vw,78px);line-height:1}.hero p{max-width:560px;font-size:20px;color:#4f3a2b}.btn{display:inline-block;margin-top:18px;padding:13px 20px;border-radius:8px;background:#557a3a;color:white;font-weight:900}.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.chips span{padding:8px 12px;border:1px solid #d9c6ac;border-radius:8px;background:#ffffffaa;font-weight:800}.section{padding:58px 22px;border-bottom:1px solid #e2d2bd}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card,.box,form,.preview{padding:22px;border:1px solid #e2d2bd;border-radius:8px;background:#fffdf8;box-shadow:0 10px 25px #3f231212}.card h3{margin:8px 0}.tag{color:#d98a2b;font-weight:900}.price{display:block;margin-top:18px;color:#7a3f1f;font-size:20px;font-weight:900}.order{display:grid;grid-template-columns:.75fr 1.1fr .9fr;gap:18px;align-items:start}.box p{margin:5px 0;font-weight:800;color:#4f3828}form{display:grid;grid-template-columns:1fr 1fr;gap:14px}label{display:grid;gap:6px;font-weight:800;color:#4b321f}.full{grid-column:1/-1}input,select,textarea{width:100%;padding:12px;border:1px solid #cdbca6;border-radius:8px;background:white;font:inherit}input[readonly]{background:#f3eadc;font-weight:900}.pickup{padding:14px;border:1px solid #adc69b;border-radius:8px;background:#edf4e8;color:#385420;font-weight:900}.pickup[hidden],[hidden]{display:none!important}button{border:0;border-radius:8px;padding:13px 18px;background:#557a3a;color:white;font:inherit;font-weight:900;cursor:pointer}pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;color:#4d3828}.foot{padding:24px;text-align:center;color:#725f50}
 
-.img-container {display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px;}
-.img-container img {width:100%;height:220px;object-fit:cover;border-radius:8px;border:1px solid #e2d2bd;}
-@media(max-width:850px){.grid,.order,form,.img-container{grid-template-columns:1fr}.nav{display:none}.hero{min-height:auto}.hero p{font-size:18px}}
+/* 原本 Codex 的排版與照片展示樣式 */
+.content-img {width:100%;max-height:420px;object-fit:cover;border-radius:8px;border:1px solid #e2d2bd;margin:20px 0;}
+.card-img {width:100%;height:180px;object-fit:cover;border-radius:6px;margin-top:14px;border:1px solid #e2d2bd;}
+
+@media(max-width:850px){.grid,.order,form{grid-template-columns:1fr}.nav{display:none}.hero{min-height:auto}.hero p{font-size:18px}}
 </style>
 </head>
 <body>
@@ -32,16 +34,8 @@
     <p class="eyebrow">Our Story</p>
     <h2>家人用時間顧火，留下自然的甜</h2>
     <p>每一批龍眼乾都需要耐心。柴燒的火候不能急，太旺會焦，太弱香氣出不來。慢慢烘到果肉變得琥珀透亮，入口先是淡淡煙燻香，接著是龍眼本身的甜。</p>
-    <div class="img-container">
-        <div>
-            <img src="1787219867390.jpg" alt="柴燒土窯生火烘焙">
-            <p style="font-size:13px;color:#725f50;text-align:center;margin-top:6px;">用龍眼木柴火細心顧火慢焙</p>
-        </div>
-        <div>
-            <img src="1787219867295.jpg" alt="土窯上滿滿的龍眼">
-            <p style="font-size:13px;color:#725f50;text-align:center;margin-top:6px;">傳統土窯翻焙作業中</p>
-        </div>
-    </div>
+    <!-- 柴燒現場土窯大圖 -->
+    <img src="1787219867390.jpg" alt="柴燒土窯現場" class="content-img">
 </section>
 
 <section class="section">
@@ -50,18 +44,19 @@
             <span class="tag">01</span>
             <h3>柴燒香氣</h3>
             <p>帶一點自然木質香，不是香精味，泡熱水後香氣更明顯。</p>
+            <img src="1787219867295.jpg" alt="土窯烘焙中" class="card-img">
         </article>
         <article class="card">
             <span class="tag">02</span>
             <h3>果肉厚實</h3>
             <p>口感 Q 軟有嚼感，直接吃不乾柴，煮甜湯也能釋放甜味。</p>
-            <img src="1787219862530.jpg" alt="剝開果肉特寫" style="width:100%;height:140px;object-fit:cover;border-radius:6px;margin-top:10px;">
+            <img src="1787219862530.jpg" alt="剝開果肉特寫" class="card-img">
         </article>
         <article class="card">
             <span class="tag">03</span>
             <h3>小量手作</h3>
             <p>家人自己處理與烘焙，數量有限，適合先預訂保留。</p>
-            <img src="1787219862397.jpg" alt="帶殼裝袋" style="width:100%;height:140px;object-fit:cover;border-radius:6px;margin-top:10px;">
+            <img src="1787219862397.jpg" alt="帶殼裝袋" class="card-img">
         </article>
     </div>
 </section>
